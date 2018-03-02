@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace ContactManager
@@ -105,6 +103,9 @@ namespace ContactManager
                 error = "Work address postal empty";
                 return false;
             }
+
+
+            /// We can no longer use the USPSManager because of framework isues.
 
             //try
             //{
