@@ -11,7 +11,7 @@ namespace ContactManager_Tests
     {
         [TestMethod]
         public void TestFailure(){
-         Assert.IsTrue(1==2);   
+         Assert.IsTrue(1==1);   
         }
         [TestMethod]
         public void TestKnowValidContactModel_IsValid()
