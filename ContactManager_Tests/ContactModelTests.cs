@@ -7,6 +7,10 @@ namespace ContactManager_Tests
     public class ContactModelTests
     {
         [TestMethod]
+        public void TestFailure(){
+         Assert.IsTrue(1==1);   
+        }
+        [TestMethod]
         public void TestKnowValidContactModel_IsValid()
         {
             var contact = new ContactModel
