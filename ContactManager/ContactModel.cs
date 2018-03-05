@@ -58,8 +58,8 @@ namespace ContactManager
                                   + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$", RegexOptions.IgnoreCase)
                 .Match(EmailAddress).Success)
             {
-
                 error = "Email not valid";
+
                 return false;
             }
 
