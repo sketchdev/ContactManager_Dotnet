@@ -21,7 +21,7 @@ namespace ContactManager_Tests
 
                 WorkAddressLine1 = "930 Kehrs Mill Rd",
                 WorkAddressLine2 = "Suite 302",
-                WorkAddressCity = "Baldwin",
+                WorkAddressCity = "Ballwin",
                 WorkAddressState = "Missouri",
                 WorkAddressPostalCode = 63011
             };
