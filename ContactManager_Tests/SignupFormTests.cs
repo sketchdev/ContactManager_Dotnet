@@ -14,6 +14,12 @@ namespace ContactManager_Tests
         }
 
         [TestMethod]
+        public void TestAChangeWorks()
+        {
+            Assert.IsTrue(1 == 1);
+        }
+
+        [TestMethod]
         public void TestEmailMissingTld_IsNotSaved()
         {
             var saved = new SignupForm().Signup("J", "W", "wheelie33@gmail");
