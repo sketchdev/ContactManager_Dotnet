@@ -14,11 +14,7 @@ namespace ContactManager_Tests
             Assert.IsTrue(saved);
         }
 
-        [TestMethod]
-        public void TestAChangeWorks()
-        {
-            Assert.IsTrue(1 == 0);
-        }
+   
 
         [TestMethod]
         public void TestEmailMissingTld_IsNotSaved()
