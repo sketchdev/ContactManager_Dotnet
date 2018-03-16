@@ -10,14 +10,14 @@ namespace ContactManager_Tests
         public void TestValidEmail_IsSaved()
         {
             var saved = new SignupForm().Signup("J", "W", "wheelie33@gmail.com");
-            
+
             Assert.IsTrue(saved);
         }
 
         [TestMethod]
         public void TestAChangeWorks()
         {
-            Assert.IsTrue(1 == 1);
+            Assert.IsTrue(1 == 0);
         }
 
         [TestMethod]
