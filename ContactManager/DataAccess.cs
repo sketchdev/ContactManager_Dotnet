@@ -1,23 +1,27 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 
 namespace ContactManager
 {
     public class DataAccess
     {
-        DatabaseConnection _connection;
 
         public DataAccess()
         {
-            var servername = "(local)";
-            var timeout = 30;
-            var datasetName = "Accounts";
-
-            var connection = new DatabaseConnection(servername, timeout, datasetName);
-            _connection = connection;
+          
+            
         }
 
         public bool SaveRecord(string firstName, string lastName, string emailAddress)
         {
+            var connection = new DatabaseConnection("(local)", 30, "Contacts");
+
+            if (!connection.IsConnected())
+            {
+                return false;
+            }
+
+
             if (firstName.Length <= 10)
             {
                 if (!Regex.IsMatch(firstName, @"^[a-zA-Z]+$"))
@@ -93,6 +97,11 @@ namespace ContactManager
             _serverName = servername;
             _timeout = timeout;
             _datasetname = datasetName;
+        }
+
+        public bool IsConnected()
+        {
+            return !string.IsNullOrWhiteSpace(_serverName);
         }
     }
 }

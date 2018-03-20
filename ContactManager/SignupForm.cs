@@ -4,10 +4,7 @@
     {
         public bool Signup(string firstName, string lastName, string emailAddress)
         {
-            var dataAccess = new DataAccess();
-
-            var saved = dataAccess.SaveRecord(firstName, lastName, emailAddress);
-            return saved;
+            return new DataAccess().SaveRecord(firstName, lastName, emailAddress);
         }
     }
 }

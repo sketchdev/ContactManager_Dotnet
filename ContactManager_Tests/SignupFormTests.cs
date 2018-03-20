@@ -58,6 +58,13 @@ namespace ContactManager_Tests
             Assert.IsFalse(saved);
         }
 
+        [TestMethod]
+        public void TestFirstNameContainsNonAlpha_IsNotSaved()
+        {
+            var saved = new SignupForm().Signup("12345", "Whelehon", "wheelie33@gmail.com");
+            Assert.IsFalse(saved);
+        }
+
 
         [TestMethod]
         public void TestLongLastName_IsNotSaved()
@@ -88,7 +95,8 @@ namespace ContactManager_Tests
         }
 
         //[TestMethod]
-        //public void TestReallyLongHyphenatedLastName_IsNotSaved(){
+        //public void TestReallyLongHyphenatedLastName_IsNotSaved()
+        //{
         //    var saved = new SignupForm().Signup("J", "wwwwwwwwwwwwwwwwwwwwwwwww-wwwwwwwwwwwwwwwwwwwwwwwww", "wheelie33@gmail.com");
         //    Assert.IsFalse(saved);
         //}
