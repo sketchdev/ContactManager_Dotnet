@@ -1,3 +1,6 @@
+Download and install dotnet SDK/CLI
+https://www.microsoft.com/net/download/windows
+
 cd into the directory you want to work from.
 
 git clone https://github.com/wheelie33/ContactManager_Dotnet .
