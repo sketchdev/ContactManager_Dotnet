@@ -3,7 +3,7 @@ https://www.microsoft.com/net/download/windows
 
 cd into the directory you want to work from.
 
-git clone https://github.com/wheelie33/ContactManager_Dotnet .
+git clone https://github.com/sketchdev/TMD_ContactManager_Dotnet .
 (note the trailing period)
 
 dotnet restore
