@@ -46,7 +46,7 @@ namespace ContactManager_Tests
         [TestMethod]
         public void TestGenericData_IsSaved()
         {
-            var saved = new SignupForm().Signup("Jason", "Whelehon", "wheelie33@gmail.com");
+            var saved = new SignupForm().Signup("J", "W", "wheelie33@gmail.com");
             Assert.IsTrue(saved);
         }
 
@@ -69,21 +69,21 @@ namespace ContactManager_Tests
         [TestMethod]
         public void TestLongLastName_IsNotSaved()
         {
-            var saved = new SignupForm().Signup("Jason", "WhelehonWhelehonWhelehonWhelehon", "wheelie33@gmail.com");
+            var saved = new SignupForm().Signup("J", "WhelehonWhelehonWhelehonWhelehon", "wheelie33@gmail.com");
             Assert.IsFalse(saved);
         }
 
         [TestMethod]
         public void TestHyphenatedLastName_IsSaved()
         {
-            var saved = new SignupForm().Signup("Jason", "Smith-Johnson", "wheelie33@gmail.com");
+            var saved = new SignupForm().Signup("J", "Smith-Johnson", "wheelie33@gmail.com");
             Assert.IsTrue(saved);
         }
 
         [TestMethod]
         public void TestInvalidEmail_IsNotSaved()
         {
-            var saved = new SignupForm().Signup("Jason", "Whelehon", "wheelie33@gmailcom");
+            var saved = new SignupForm().Signup("J", "Whelehon", "wheelie33@gmailcom");
             Assert.IsFalse(saved);
         }
 
@@ -94,12 +94,12 @@ namespace ContactManager_Tests
             Assert.IsFalse(saved);
         }
 
-        //[TestMethod]
-        //public void TestReallyLongHyphenatedLastName_IsNotSaved()
-        //{
-        //    var saved = new SignupForm().Signup("J", "wwwwwwwwwwwwwwwwwwwwwwwww-wwwwwwwwwwwwwwwwwwwwwwwww", "wheelie33@gmail.com");
-        //    Assert.IsFalse(saved);
-        //}
+        [TestMethod]
+        public void TestReallyLongHyphenatedLastName_IsNotSaved()
+        {
+            var saved = new SignupForm().Signup("J", "wwwwwwwwwwwwwwwwwwwwwwwww-wwwwwwwwwwwwwwwwwwwwwwwww", "wheelie33@gmail.com");
+            Assert.IsFalse(saved);
+        }
 
 
         //[TestMethod]

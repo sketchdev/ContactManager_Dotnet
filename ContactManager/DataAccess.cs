@@ -24,7 +24,7 @@ namespace ContactManager
 
             if (firstName.Length <= 10)
             {
-                if (!Regex.IsMatch(firstName, @"^[a-zA-Z]+$"))
+                if (!Regex.IsMatch(firstName, @"^[a-zA-Z]$"))
                 {
                     return false;
                 }
