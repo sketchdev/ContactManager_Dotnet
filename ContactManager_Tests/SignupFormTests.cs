@@ -95,7 +95,7 @@ namespace ContactManager_Tests
         }
 
         [TestMethod]
-        public void TestReallyLongHyphenatedLastName_IsNotSaved()
+        public void TestHyphenatedLastName_LongerThan20Characters_IsNotSaved()
         {
             var saved = new SignupForm().Signup("J", "wwwwwwwwwwwwwwwwwwwwwwwww-wwwwwwwwwwwwwwwwwwwwwwwww", "wheelie33@gmail.com");
             Assert.IsFalse(saved);
